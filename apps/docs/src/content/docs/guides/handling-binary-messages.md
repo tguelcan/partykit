@@ -119,7 +119,7 @@ onMessage(message: string | ArrayBuffer) {
 And do the same on the client:
 
 ```ts
-socket.addEventListener((event) => {
+socket.addEventListener(async(event) => {
   const data =
     event.data instanceof Blob
       ? // byte array -> msgpack
